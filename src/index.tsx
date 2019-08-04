@@ -1,11 +1,21 @@
 import './index.css'
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import App from './App'
+import { Header } from './components'
+import { Home } from './scenes'
 import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <BrowserRouter>
+    <Fragment>
+      <Header />
+      <Route component={Home} />
+    </Fragment>
+  </BrowserRouter>,
+  document.getElementById('root')
+)
 
 serviceWorker.unregister()
