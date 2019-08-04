@@ -6,13 +6,7 @@ import { RouteComponentProps } from 'react-router'
 import { Loading, Result } from '../components'
 import { useStoreActions, useStoreState } from '../store'
 
-interface Props {
-  query: string
-}
-
-const Results: FunctionComponent<RouteComponentProps<Props>> = ({
-  location
-}) => {
+const Results: FunctionComponent<RouteComponentProps> = ({ location }) => {
   const { search } = useStoreActions(actions => actions.results)
   const { loading, results } = useStoreState(state => state.results)
 
