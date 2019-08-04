@@ -1,0 +1,23 @@
+.header {
+  align-items: center;
+  display: flex;
+  margin: 2em 0;
+
+  .kino {
+    img {
+      height: 3em;
+      width: 3em;
+    }
+  }
+
+  .favorites {
+    align-items: center;
+    display: flex;
+    margin: auto;
+
+    img {
+      height: 2em;
+      margin-right: 0.5em;
+    }
+  }
+}

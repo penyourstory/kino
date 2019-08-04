@@ -1,6 +1,6 @@
-import './index.css'
+import './index.scss'
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 
@@ -10,10 +10,10 @@ import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <BrowserRouter>
-    <Fragment>
+    <div className="main">
       <Header />
-      <Route component={Home} />
-    </Fragment>
+      <Route path="/" component={Home} exact />
+    </div>
   </BrowserRouter>,
   document.getElementById('root')
 )
