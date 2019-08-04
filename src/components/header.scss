@@ -1,10 +1,14 @@
+@import '../assets/variables';
+
 .header {
   align-items: center;
+  background: $color-background-dark;
   display: flex;
-  margin: 2em 0;
+  padding: 1em 2em;
 
   .kino {
     img {
+      display: block;
       height: 3em;
       width: 3em;
     }

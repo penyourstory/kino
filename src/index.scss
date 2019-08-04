@@ -20,8 +20,8 @@
 body {
   background: $color-background;
   color: $color-text;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font: normal 1em/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,6 +44,7 @@ form {
     border-radius: 0.25em;
     border: none;
     font: inherit;
+    line-height: 1;
     padding: 1em;
   }
 
@@ -76,13 +77,14 @@ h3 {
   font-size: 1em;
 }
 
+p {
+  line-height: 1.4;
+  margin: 1em 0;
+}
+
 // layout
 
-.main {
-  margin: auto;
-  width: 50em;
-
-  main {
-    min-height: 60vh;
-  }
+main {
+  min-height: calc(100vh - 5.125em);
+  padding: 2em;
 }
