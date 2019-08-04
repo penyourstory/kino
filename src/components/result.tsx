@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { Result as IResult } from '../store/models'
 
-const { REACT_APP_IMAGE_URI } = process.env
+const { REACT_APP_POSTER_URI } = process.env
 
 interface Props {
   result: IResult
@@ -19,7 +19,7 @@ const Result: FunctionComponent<Props> = ({
     <Link className="result" to={`/films/${id}`}>
       <figure
         style={{
-          backgroundImage: `url(${REACT_APP_IMAGE_URI}/${poster_path})`
+          backgroundImage: `url(${REACT_APP_POSTER_URI}/${poster_path})`
         }}
       />
       <h3>{title}</h3>
