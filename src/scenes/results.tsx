@@ -32,6 +32,7 @@ const Results: FunctionComponent<RouteComponentProps> = ({ location }) => {
     <main className="results">
       <h1>Search results for &#34;{query}&#34;</h1>
       <section>
+        {results.length === 0 && <p>Nothing found.</p>}
         {results.map((result, index) => (
           <Result key={index} result={result} />
         ))}
