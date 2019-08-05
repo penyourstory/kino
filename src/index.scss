@@ -66,15 +66,23 @@ h3 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
 }
 
 p {
@@ -86,5 +94,4 @@ p {
 
 main {
   min-height: calc(100vh - 5.125em);
-  padding: 2em;
 }

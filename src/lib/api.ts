@@ -9,8 +9,15 @@ class API {
     return results
   }
 
-  fetch(id: number) {
-    return this.request(`/movie/${id}`)
+  async fetch(id: number) {
+    const film = await this.request(`/movie/${id}`)
+
+    const credits = await this.request(`/movie/${id}/credits`)
+
+    return {
+      ...film,
+      ...credits
+    }
   }
 
   async request(uri: string) {
