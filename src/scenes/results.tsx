@@ -1,28 +1,28 @@
 import './results.scss'
 
-import React, { FunctionComponent, useEffect, useState } from 'react'
-import { RouteComponentProps } from 'react-router'
+import React, { FunctionComponent, useEffect } from 'react'
+import { Redirect, RouteComponentProps } from 'react-router'
 
 import { Loading, Result } from '../components'
 import { useStoreActions, useStoreState } from '../store'
 
 const Results: FunctionComponent<RouteComponentProps> = ({ location }) => {
-  const [query, setQuery] = useState('')
-
   const { search } = useStoreActions(actions => actions.results)
   const { loading, results } = useStoreState(state => state.results)
 
+  const params = new URLSearchParams(location.search.slice(1))
+
+  const query = params.get('query')
+
   useEffect(() => {
-    const params = new URLSearchParams(location.search.slice(1))
-
-    const query = params.get('query')
-
     if (query) {
-      setQuery(query)
-
       search(query)
     }
-  }, [location.search, search])
+  }, [query, search])
+
+  if (!query) {
+    return <Redirect to="/" />
+  }
 
   if (loading) {
     return <Loading />
