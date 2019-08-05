@@ -139,7 +139,7 @@ const favorites: FavoritesModel = {
     } else {
       const { id, poster_path, release_date, title, vote_average } = film
 
-      state.favorites.push({
+      state.favorites.unshift({
         id,
         poster_path,
         release_date,
