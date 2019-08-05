@@ -7,7 +7,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { PersistGate } from 'redux-persist/integration/react'
 
 import { Header } from './components'
-import { Film, Home, Results } from './scenes'
+import { Favorites, Film, Home, Results } from './scenes'
 import * as serviceWorker from './serviceWorker'
 import { persistor, store } from './store'
 
@@ -18,8 +18,9 @@ ReactDOM.render(
         <div className="main">
           <Header />
           <Route path="/" component={Home} exact />
-          <Route path="/search" component={Results} />
+          <Route path="/favorites" component={Favorites} />
           <Route path="/films/:id" component={Film} />
+          <Route path="/search" component={Results} />
         </div>
       </BrowserRouter>
     </StoreProvider>
