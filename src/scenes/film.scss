@@ -48,7 +48,16 @@
         cursor: pointer;
         font: inherit;
         padding: 1em;
+        transition: 0.3s;
         width: 100%;
+
+        &:hover {
+          background: lighten($color-accent, 10%);
+        }
+
+        &:active {
+          background: darken($color-accent, 10%);
+        }
       }
 
       hr {
