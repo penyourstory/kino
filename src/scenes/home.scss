@@ -3,4 +3,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 2em 0 0;
+  }
 }

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Home: FunctionComponent = () => {
   return (
     <main className="home">
-      <p>Welcome to Kino Cinemas.</p>
+      <h1>Welcome to Kino Cinemas.</h1>
       <p>
         Try searching for <Link to="/search?query=avengers">Avengers</Link>
         &#160;or&#160;
